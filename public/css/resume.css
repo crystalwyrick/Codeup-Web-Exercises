@@ -1,0 +1,27 @@
+.super_realtor {
+	/*float: left;*/
+	position: relative;
+	width: 225px;
+	}
+
+h1,
+h2,
+h3	{
+	font-family: 'Sigmar One', cursive;
+	text-align: center;
+	}
+
+body {
+	background-image: url(/img/subtlepattern.png);
+}
+
+/*.nav-pills {}*/
+
+.btn.btn-primary {
+	padding: 50px;
+	margin:	0px 30px;
+}
+
+.contact_button {
+	border: 0px solid ; width: 64px; height: 63px
+}

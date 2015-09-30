@@ -1,0 +1,40 @@
+	body {
+		background-color: papayawhip;
+	}
+
+	nav ul {
+		list-style-type: none;
+		margin:	0;
+		padding: 0;
+	}
+
+	nav li {
+		float: left;
+	}
+
+	nav a {
+		display: block;
+		text-align: center;
+		width: 120px;
+		background-color: grey;
+		border: 1px solid black;
+		border-radius: 30px
+	}
+
+	nav a:link {
+		text-decoration: none;
+	}
+
+	nav a:visited {
+		color: blue;
+	}
+
+	nav a:active {
+		color: red;
+	}
+
+	nav a:hover {
+		color: orange;
+	}	
+
+	

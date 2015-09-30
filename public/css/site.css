@@ -1,0 +1,44 @@
+
+
+/*
+this content is stored in a file named "site.css" in a directory named "css" is the web root
+*/
+
+.fancy-header {
+		color: yellow;
+		text-decoration: underline;
+}
+.extra-large {
+    font-size: 200px;
+}
+
+
+
+a:link{
+	color: salmon;
+}
+a:visited{ 
+	color: papayawhip;
+}
+a:hover:{
+	color: blue;
+}
+a:active:{
+	color: pink;
+}
+
+.yoda_quote {
+		background-color: #B3B575;
+		width: 400px;
+		height: 250px;
+		color:#283A0A;
+		font-family: helvetica;
+		font-size: 1.5em;
+		background-image: url(/img/yoda.jpg);
+}
+
+h2 {text-decoration: underline;
+}
+body {
+	background-color: #845635
+}

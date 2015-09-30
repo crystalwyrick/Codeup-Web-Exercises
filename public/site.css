@@ -1,0 +1,11 @@
+/*
+this content is stored in a file named "site.css" in a directory named "css" is the web root
+*/
+
+.fancy-header {
+		color: yellow;
+		text-decoration: underline;
+}
+.extra-large {
+    font-size: 200px;
+}
