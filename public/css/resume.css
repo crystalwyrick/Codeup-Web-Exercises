@@ -1,3 +1,13 @@
+
+.well {
+	background-image: none;
+	background-color: yellow
+}
+
+.collapse_communication{
+	background-color: yellow;
+	background-image: none;
+}
 .super_realtor {
 	/*float: left;*/
 	position: relative;
