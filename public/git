@@ -41,5 +41,16 @@ merge conflict: prompts selection of which changes to save
 	- git push origin master -  recommend at least a couple times a day; when you finish something or leave the work
 
 	
+git add . - add new, modified, and deleted files
+git add public/css/selectors.css - add specific area of files
+git add *.css - add all css files
 
+add commit message:
+	git commit -m "css files for selectors"
+	or
+	git commit 
+
+git reset - start over
+
+push - git push origin master
 
