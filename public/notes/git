@@ -35,6 +35,7 @@ merge conflict: prompts selection of which changes to save
 
 *working in an existing repo*
 	- add and modify files
+	- cd to codeup.dev
 	- git status at any time
 	- git add filename.html or git add -A
 	- git commit
