@@ -34,6 +34,13 @@ merge conflict: prompts selection of which changes to save
 
 
 *working in an existing repo*
+
+	1- cd sites/codeup.dev/
+	2- *git status* to see what's been added or modified or deleted
+	3- *git add -A
+	4- *git commit*
+	5- *git push origin master*
+
 	- add and modify files
 	- git status at any time
 	- git add filename.html or git add -A
