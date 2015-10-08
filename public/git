@@ -35,7 +35,7 @@ merge conflict: prompts selection of which changes to save
 
 *working in an existing repo*
 
-	1- cd sites/codeup.dev/
+	1- *cd sites/codeup.dev/
 	2- *git status* to see what's been added or modified or deleted
 	3- *git add -A
 	4- *git commit*

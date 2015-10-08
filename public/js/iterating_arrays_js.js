@@ -60,23 +60,63 @@
 var holidays = ["Halloween", "Thanksgiving", "Christmas", "New Year's Day", "Valentine's Day"]
 	console.log(holidays);
 
+
 	for(var i = 0; i < holidays.length; i +=1) {
 	console.log(holidays[i]);
 }
 
+
 holidays.forEach(function (holidays, index, array) {
 	console.log(holidays);
 });
-
-
-
-
 
 // Open the HTML file named iterating_arrays_js.html within the ~/vagrant-lamp/sites/codeup.dev/public folder that you created in the last lesson.
 // Modify the code that logs out the names array elements individually to instead use a for loop.
 // Below the for loop, use a forEach loop to print the names again.
 // View the results in your browser to test for the expected output.
 // Finally, save your work, commit the changes to your git repository, and push to GitHub.
+
+/////////////////
+
+// Add to an array:
+// Method= function that runs...
+var holidays = ["Halloween", "Thanksgiving", "Christmas", "New Year's Day", "Valentine's Day"]
+	console.log(holidays);
+
+// to add to an array:
+holidays.push("bean and cheese");
+
+	for(var i = 0; i < holidays.length; i +=1) {
+	console.log(holidays[i]);
+}
+
+
+holidays.forEach(function (holidays, index, array) {
+	console.log(holidays);
+});
+
+/////////////////
+
+// Add and remove from array:
+	 var beatles = ["John", "Paul", "George", "Ringo"];
+
+	 beatles.push("Bob Dylan");
+	 console.log(beatles);
+	 // removes last item - pop just removes from the end:
+	 beatles.pop();
+	 cpnsole.log("I just popped Bob");
+	 console.log(beatles);
+
+	/////////////
+	// remove or add to the beginning of the array:
+	beatles.shift();
+	beatles.unshift("Bob Dylan");
+
+	////gives you the index of an element:
+	beatles.indexOf("Paul");
+
+
+// Splice:
 
 
 
