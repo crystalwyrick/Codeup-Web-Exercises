@@ -1,0 +1,61 @@
+body {
+	margin: 50px;
+	background-color: #f5f5dc
+}
+
+button {
+	width: 100px;
+	height: 75px;
+	font-size: 30px;
+	box-shadow: 10px 10px 5px #00308f;
+	color: #00308f;
+	outline: solid #00308f;
+}
+
+#first_input {
+	background-color: #f47835;
+	width: 155px;
+	height: 75px;
+	box-shadow: 10px 10px 5px #00308f;
+	outline: solid #00308f;
+	margin-bottom: 10px;
+	font-size: 30px;
+	color: #00308f;
+}
+
+#op_input {
+	background-color: #f47835;
+	width: 75px;
+	height: 75px;
+	box-shadow: 10px 10px 5px #00308f;
+	outline: solid #00308f;
+	margin-bottom: 10px;
+	font-size: 30px;
+	color: #00308f;
+}
+
+#second_input {
+	background-color: #f47835;
+	width: 155px;
+	height: 75px;
+	box-shadow: 10px 10px 5px #00308f;
+	outline: solid #00308f;
+	margin-bottom: 10px;
+	font-size: 30px;
+	color: #00308f;
+}
+
+#btnclear {
+	background-color: #8ec127;
+}
+
+#btnequals {
+	background-color: #d41243;
+}
+
+.operator {
+	background-color: #a200ff;
+}
+.number {
+	background-color: #00aedb;
+}
