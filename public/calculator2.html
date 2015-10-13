@@ -5,9 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="css/calculator.css">
 </head>
 <body>
-	<input type="textarea" id="first_input"></input>
-	<input type="textarea" id="op_input"></input>
-	<input type="textarea" id="second_input"></input>
+	<input class="inputs" type="textarea" id="first_input" readonly></input>
+	<input class="inputs" type="textarea" id="op_input" readonly></input>
+	<input class="inputs" type="textarea" id="second_input" readonly></input>
+	<button id="btnclear">C</button>
 	<br>
 	<button class="number">1</button>
 	<button class="number">2</button>
@@ -24,10 +25,12 @@
 	<button class="number">9</button>
 	<button class="operator">*</button>
 	<br>
-	<button id="btnclear">C</button>
 	<button class="number">0</button>
+	<button class="number">.</button>
 	<button id="btnequals">=</button>
 	<button class="operator">/</button>
+	<br>
+	
 
 	<script>
 		// textinputs
