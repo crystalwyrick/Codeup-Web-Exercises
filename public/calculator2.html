@@ -33,6 +33,7 @@
 	
 
 	<script>
+
 		// textinputs
 		var first_input = document.getElementById("first_input");
 		var op_input = document.getElementById("op_input");
@@ -68,22 +69,22 @@
 		// operators with equals
 		btnequals.addEventListener("click", function(){
 			if (op_input.value == "+"){
-				first_input.value = parseInt(first_input.value) + parseInt(second_input.value);
+				first_input.value = parseFloat(first_input.value) + parseFloat(second_input.value);
 				op_input.value = "";
 				second_input.value = "";
 			}
 			if (op_input.value == "-"){
-				first_input.value = parseInt(first_input.value) - parseInt(second_input.value);
+				first_input.value = parseFloat(first_input.value) - parseFloat(second_input.value);
 				op_input.value = "";
 				second_input.value = "";
 			}
 			if (op_input.value == "*"){
-				first_input.value = parseInt(first_input.value) * parseInt(second_input.value);
+				first_input.value = parseFloat(first_input.value) * parseFloat(second_input.value);
 				op_input.value = "";
 				second_input.value = "";
 			}
 			if (op_input.value == "/"){
-				first_input.value = parseInt(first_input.value) / parseInt(second_input.value);
+				first_input.value = parseFloat(first_input.value) / parseFloat(second_input.value);
 				op_input.value = "";
 				second_input.value = "";
 			}
@@ -96,6 +97,12 @@
 			second_input.value = "";
 		})
 
+
+// you can use the toString() method to output numbers as base 16 (hex), base 8 (octal), or base 2 (binary).
+// var myNumber = 128;
+// myNumber.toString(16);     // returns 80
+// myNumber.toString(8);      // returns 200
+// myNumber.toString(2);      // returns 10000000
 
 	</script>
 </body>
