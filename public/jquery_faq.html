@@ -84,7 +84,7 @@
 			$("dd").addClass("invisible");
 
 			$("#answer").click(function(event) {
-				$("dd").toggleClass("invisible");
+				$("dd").toggle();
 			})
 
 			$("ul").each(function() {
@@ -97,10 +97,10 @@
 			// $("li:nth-child(3)").css("font-weight","bold");
 
 			$("li").click(function(event) {
-				$(this).parent().addClass("invisible");
+				$(this).parent().hide();
 			});
 			$("h3").click(function() {
-				$("ul").removeClass("invisible");
+				$("ul").show();
 			})
 
 		});
