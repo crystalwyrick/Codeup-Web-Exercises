@@ -13,7 +13,7 @@
     <div id="map-canvas"></div>
 
     <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY_GOES_HERE"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlvJJv-rcjWx-L7S4cPxiOOo_TT2wYupc"></script>
 
     <!-- Script to show address on map -->
     <script type="text/javascript">
@@ -34,6 +34,45 @@
 
         // Render the map
         var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+        // Set our address to geocode
+var address = "1031 Patricia, San Antonio, TX 78213";
+
+// Init geocoder object
+var geocoder = new google.maps.Geocoder();
+
+// Geocode our address
+geocoder.geocode({ "address": address }, function(results, status) {
+
+   // Check for a successful result
+   if (status == google.maps.GeocoderStatus.OK) {
+
+       // Recenter the map over the address
+       map.setCenter(results[0].geometry.location);
+   } else {
+
+       // Show an error message with the status if our request fails
+       alert("Geocoding was not successful - STATUS: " + status);
+   }
+
+});
+   // Create lat and long for our marker position
+var indiaOven = { lat: 29.545493, lng: -98.512188 };
+
+// Add the marker to our existing map
+var marker = new google.maps.Marker({
+    position: indiaOven,
+    map: map
+});
+var infowindow = new google.maps.InfoWindow({
+    content: "Love this place!"
+});
+infowindow.open(map, marker);
     })();
     </script>
 </body>
+
+
+
+
+
+
