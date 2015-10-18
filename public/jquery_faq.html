@@ -13,10 +13,11 @@
 
 		dt {
 			font-weight: bold;
+			color:#005200;
 		}
 
 		dd {
-			color: blue;
+			color: #338533;
 		}
 	</style>
 		<button id="answer">Answer</button>
@@ -84,7 +85,7 @@
 			$("dd").addClass("invisible");
 
 			$("#answer").click(function(event) {
-				$("dd").toggle();
+				$("dd").fadeToggle();
 			})
 
 			$("ul").each(function() {
@@ -97,11 +98,15 @@
 			// $("li:nth-child(3)").css("font-weight","bold");
 
 			$("li").click(function(event) {
-				$(this).parent().hide();
+				$(this).parent().slideUp();
 			});
 			$("h3").click(function() {
-				$("ul").show();
+				$("ul").slideDown();
 			})
+
+			$('li').css('background-color', '#338533');
+            $('li').parent().css('background-color', '#005200');
+
 
 		});
 	</script>

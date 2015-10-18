@@ -1,9 +1,9 @@
 
 // ID Selector exercise:
-// $(document).ready(function() {
-// 	var contents = $("#li");
-// 	alert(contents.html());
-// })
+$(document).ready(function() {
+	var contents = $(".li");
+	console.log(contents.html());
+})
 
 // Class Selector Exercise:
 // $(document).ready(function() {
