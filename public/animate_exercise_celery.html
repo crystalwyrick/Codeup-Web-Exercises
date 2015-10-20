@@ -14,11 +14,11 @@
         }
 
         #animate-box {
-            background-color: #000033;
+        	content: url(/img/inch_worm.jpg);
             height: 250px;
             margin: 15px;
             position: relative;
-            width: 250px;
+            width: 350px;
         }
 
 
@@ -39,8 +39,8 @@
     
 	<!-- animate setup shown in one line: -->
     <!-- $("#box").animate({}, time); -->
-    <!-- $("#box").animate({}, time, function(){console.log();}) -->
-    <!-- $(selector).animate({ },time).animate({ },time).animate({ },time); -->
+    <!-- $("#box").animate({}, timre, function(){console.log();}) -->
+    <!-- $(selector).animate({ },time).animate().animate(); -->
     <script>
     $(document).ready(function() {
         "use strict";
@@ -55,7 +55,7 @@
         	$("#btn-scale").click(function(event) {
         		console.log($('#animate-box').width());
         		$("#animate-box").animate({
-        			width: "+=125"
+        			width: "+=325"
         		});
         	});
 
@@ -76,15 +76,13 @@
         		$("#animate-box").animate({ 
         			left: "100",
         			width: "+=125"
-        		},2000).animate({
-        			opacity: "toggle",
-        			borderRadius:"500"
-        		},2000).animate({ 
+        		},1000).animate({
+        			opacity: "toggle"
+        		},1000).animate({ 
         			left: "-=100",
         			width: "-=125",
-        			opacity: "toggle",
-        			borderRadius: "0"
-        		},2000);
+        			opacity: "toggle"
+        		},1000);
 
         		
 
