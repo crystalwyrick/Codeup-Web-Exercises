@@ -1,0 +1,130 @@
+<!-- ------------------------ -->
+<!doctype html>
+<html>
+<head>
+	<title>Weather Maps API</title>
+	<link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/weather_map.css">
+	<script src="/js/moment.js"></script>
+	 
+</head>
+<body>
+	<h1 id="city-name">Weather</h1>
+	<div class="col-md-6 col-md-offset-3"id="map-canvas"></div>
+	<form class="col-md-6 col-md-offset-3">
+		<!-- use label tags -->
+	<span>Latitude: </span><input type="text" id="lat">
+	<span>Longitude: </span><input type="text" id="lon">
+	<button type="button" id="button">Go!</button>
+	</form>
+	<table class="table table-hover" id="products">
+	    <thead>
+	        <tr>
+	        	<th></th>
+	        	<th>Outlook</th>
+	            <th>Temperature</th>
+	            <th>Rain</th>
+	            <th>Humidity</th>
+	            <th>Conditions</th>
+	            <th>Cloudiness</th>
+	            <th>Wind Speed</th>
+	        </tr>
+	    </thead>
+    	<tbody id="insertWeather"></tbody>
+	</table>
+
+	
+
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlvJJv-rcjWx-L7S4cPxiOOo_TT2wYupc"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script>
+// ----------------------------
+		var mapOptions = {
+        	zoom: 10,
+		};
+		// .get(0)
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+		var address = "78201";
+		var geocoder = new google.maps.Geocoder();
+		var mapLocation= "";
+
+		// Geocode our address
+		geocoder.geocode({ "address": address }, function(results, status) {
+
+		   // Check for a successful result
+		   if (status == google.maps.GeocoderStatus.OK) {
+
+		   	console.log(results[0].geometry.location);
+		       // Recenter the map over the address
+		       map.setCenter(results[0].geometry.location);
+		   } else {
+
+		       // Show an error message with the status if our request fails
+		       alert("Geocoding was not successful - STATUS: " + status);
+		   }
+
+		});
+
+		function getWeather(lat, lon) {
+			$.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+			    APPID: "624b20ac8611796bcb1bb06bd8cc2b8c",
+			    lat:    lat,
+			    lon:   lon,
+				units: "imperial",
+				cnt: 5
+			}).done(function(data) {
+
+				$("#insertWeather").html("");
+
+			    console.log(data);
+
+			    mapLocation = data.city.name;
+			    $("#city-name").html(mapLocation + " Weather");
+			    console.log(mapLocation);
+
+			    var dailyFacts = "<tr>";
+
+			    data.list.forEach(function (day){
+			    	dailyFacts += "<td>" + moment.unix(day.dt).format("dddd") + "</td>";
+			    	dailyFacts += "<td>" + '<img src="http://openweathermap.org/img/w/'+ day.weather[0].icon + '.png" >' + "</td>"; 
+	                dailyFacts += "<td>" + Math.round(day.temp.max) + "&deg;" + "</td>";
+	                dailyFacts += "<td>" + Math.round(day.rain) + "</td>";
+	                dailyFacts += "<td>" + day.humidity + "%;" + "</td>";
+	                dailyFacts += "<td>" + day.weather[0].description + "</td>";  
+	                dailyFacts += "<td>" + day.clouds + "%;" + "</td>"; 
+	                dailyFacts += "<td>" + Math.round(day.speed) + " mph" + "</td>";   
+	                dailyFacts += "</tr>";
+	                console.log(dailyFacts);               
+	           	});
+
+			    $("#insertWeather").append(dailyFacts);
+			});
+		}
+		// $("#insertMap").html("");
+		$("#lat").value = 29.423017;
+		// document.getElementById("lat").value = 29.423017;
+		document.getElementById("lon").value = -98.48527;
+		function go (){
+			var latInput = parseFloat(document.getElementById("lat").value);
+			var lonInput = parseFloat(document.getElementById("lon").value);
+			map.panTo({
+				lat: latInput,
+				lng: lonInput
+			})
+			
+
+			// call weather function with lat and long
+			getWeather(latInput,lonInput);
+		}
+		// make submit vs click <input type="submit">
+		// consider "change" vs "click" to lessen steps for user
+		document.getElementById("button").addEventListener("click", go, false);
+		go();
+
+		// geometry.location.lon
+// ------------------------
+
+	</script>
+</body>
+</html>

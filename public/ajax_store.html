@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Store</title>
+    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="/css/bootstrap-cyborg.css" rel="stylesheet">
+    
+    <style>
+
+        body, table {
+            background-color: #CCCCCC;
+        }
+
+        td, th {
+            text-align: center;
+            color: #8F006B;
+            font-family: georgia;
+            font-size: 24px;
+        }
+        h1 {
+            text-align: center;
+            font-weight: bold;
+        }
+        #btn-refresh {
+            border-radius: 10px;
+            margin-left: 600px;
+            font-family: verdana;
+
+
+        }
+    </style>
+</head>
+<body>
+
+<h1>My Tool Store</h1>
+<button id="btn-refresh">Refresh</button>
+
+<table class="table table-hover" id="products">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Categories</th>
+        </tr>
+    </thead>
+    <tbody id="insertProducts"></tbody>
+</table>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<script>
+    (function() {
+
+        $.get("/data/inventory.json").done(function(inventory) {
+            console.log(inventory)
+
+            var tableRowHtml = '';
+            inventory.forEach(function(store_item) {
+
+                console.log()
+                    
+                    var tableRowHtml = "<tr>";
+                    tableRowHtml += "<td>" + store_item.title + "</td>";
+                    tableRowHtml += "<td>" + store_item.quantity + "</td>";
+                    tableRowHtml += "<td>" + "$" + store_item.price + "</td>";
+                    tableRowHtml += "<td>" + store_item.categories + "</td>";        
+                    tableRowHtml += "</tr>";
+                    console.log(tableRowHtml);
+
+                    $("#insertProducts").append(tableRowHtml)
+            })
+
+            // console.log(inventory[0]);
+            // console.log(tableRowHtml);
+        })
+
+        $("#btn-refresh").click(function(event) {
+
+            $("#insertProducts").html(""); 
+
+            $.get("/data/inventory.json").done(function(inventory) {
+                console.log(inventory)
+
+                var tableRowHtml = '';
+                inventory.forEach(function(store_item) {
+
+                    console.log()
+                        
+                        tableRowHtml = "<tr>";
+                        tableRowHtml += "<td>" + store_item.title + "</td>";
+                        tableRowHtml += "<td>" + store_item.quantity + "</td>";
+                        tableRowHtml += "<td>" + store_item.price + "</td>";
+                        tableRowHtml += "<td>" + store_item.categories + "</td>";        
+                        tableRowHtml += "</tr>";
+                        console.log(tableRowHtml);
+
+                        $("#insertProducts").append(tableRowHtml);
+                }) 
+            })
+        })
+
+
+
+
+        // TODO: Create an ajax GET request for /data/inventory.json
+
+        // TODO: Take the data from inventory.json and append it to the products table
+        //       HINT: Your data should come back as a JSON object; use console.log() to inspect
+        //             its contents and fields
+        //       HINT: You will want to target #insertProducts for your new HTML elements
+    })();
+</script>
+
+</body>
+</html>

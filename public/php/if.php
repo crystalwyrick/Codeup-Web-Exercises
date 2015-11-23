@@ -31,7 +31,7 @@
 
  if ($b === $c) {
      // output the appropriate result
-     echo "$b is identical to $c\n";
+     echo "$b is identical to $c and has the same data type \n";
  }
 
  // output the appropriate result

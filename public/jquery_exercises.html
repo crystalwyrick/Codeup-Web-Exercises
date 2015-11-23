@@ -1,0 +1,106 @@
+<!-- <!doctype html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1 id="jquery" class="codeup">This is JQuery</h1>
+	<div>
+		<p id="paragraph">This is a random paragraph that contains a list.
+			<ul>unordered list
+				<li class="codeup">list item 1</li>
+				<li class="codeup">list item 2</li>
+			</ul>
+		</p>
+	</div>
+		<script src="/js/jquery-1.11.3.min.js"></script>
+		<script src="/js/jquery_exercises.js"></script>
+</body>
+ </html> -->
+
+<!doctype html>
+<html>
+<head>
+	<title>JQuery Exercise</title>
+	<style>
+		.sweets {
+			font-family: cursive;
+		}
+	</style>
+</head>
+<body>
+	 <script src="/js/jquery-1.11.3.min.js"></script>
+	<script>
+		"use strict";
+
+		  $(document).ready(function() {
+            $('.sweets').css('color', '#663300').css("background-color","#E6F5F5");
+            $('#header').css('color', '#663300').css("background-color","#E6F5F5");
+            $('.sweets_description').css('color', '#007A7A').css("background-color","#D1C2B2");
+            $('#sweets_list').css('color', '#007A7A').css("background-color","#663300");
+            $("p").css('font-size', '20px').css("font-family","cursive");
+            $("*").css('border', '2px solid #FFCCFF');
+          
+        });
+			$(document).ready(function() {
+	  			$('#header').hover(function() {
+	                $(this).css("font-size","36px");
+		       	});
+	            $('p').hover(function() {
+	                $(this).css("font-size","24px");
+				});
+			});
+
+
+	</script>
+		<h1 id="header">JQuery Exercise</h1>
+		<div>
+			<p class="sweets_description">Cupcake ipsum dolor sit amet chocolate cake. Lemon drops apple pie cheesecake sesame snaps jelly beans fruitcake tart chocolate bar. Apple pie chupa chups dessert bear claw.
+		
+			Caramels carrot cake bear claw oat cake fruitcake. Muffin jelly beans cheesecake bonbon cake powder sesame snaps danish oat cake. Jujubes chocolate cake candy.
+			</p>
+		</div>
+		<div>
+			<ul id="sweets_list">
+				<li class="sweets">Cheesecake</li>
+				<li class="sweets">Apple Pie</li>
+				<li class="sweets">Pumpkin Bread</li>
+			</ul>
+		</div>
+	
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Example jQuery Page</title>
+    <style>
+        .important {
+            text-align: center;
+        }
+    </style>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script>
+        "use strict";
+
+        $(document).ready(function() {
+            $('.important').css('background-color', '#FF0');
+        });
+    </script>
+</head>
+<body>
+    <h1>Example Page</h1>
+    <div class="important">
+        <h3>NOTICE</h3>
+        <p>This is an important message!</p>
+    </div>
+    <div class="not-important">
+        <h2>Lorem Ipsum</h2>
+        <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
+    </div>
+    <p class="important">This is also very important.</p>
+</body>
+</html> -->

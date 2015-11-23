@@ -1,0 +1,19 @@
+
+
+Monthly Sales Report
+Date: 03-17-2015
+Office: Codeup
+===================================================
+Employee Number, First Name, Last Name, Sales Units
+***************************************************
+1, Jane, Janeway, 3
+3, Tricia, Triciason, 5
+4, Jeannette, Jeanson, 4
+5, Charles Emmerson III, Winchester, 2
+6, Chet, Chedderson, 8
+7, Chaiam, Chaiamson, 12
+8, Dale, Dalesinger, 1
+9, Zig, Ziglar, 50
+10, Henry, Kissinger, 1
+11, Arthur Herbert, Fonzarelli, 23
+12, Betty, Boop, 67

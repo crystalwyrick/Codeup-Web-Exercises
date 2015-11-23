@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+	<title>Calculator</title>
+</head>
+<body>
+	<input type="textarea" id="first_input"></input>
+	<input type="textarea" id="op_input"></input>
+	<input type="textarea" id="second_input"></input>
+	<br>
+	<button id="btn1">1</button>
+	<button id="btn2">2</button>
+	<button id="btn3">3</button>
+	<button id="btnplus">+</button>
+	<br>
+	<button id="btn4">4</button>
+	<button id="btn5">5</button>
+	<button id="btn6">6</button>
+	<button id="btnminus">-</button>
+	<br>
+	<button id="btn7">7</button>
+	<button id="btn8">8</button>
+	<button id="btn9">9</button>
+	<button id="btnmult">*</button>
+	<br>
+	<button id="btnclear">C</button>
+	<button id="btn0">0</button>
+	<button id="btnequals">=</button>
+	<button id="btndivide">/</button>
+
+	<script>
+		// textinputs
+		var first_input = document.getElementById("first_input");
+		var op_input = document.getElementById("op_input");
+		var second_input = document.getElementById("second_input");
+
+		// buttons
+		var btn1 = document.getElementById("btn1");
+		var btn2 = document.getElementById("btn2");
+		var btn3 = document.getElementById("btn3");
+		var btn4 = document.getElementById("btn4");
+		var btn5 = document.getElementById("btn5");
+		var btn6 = document.getElementById("btn6");
+		var btn7 = document.getElementById("btn7");
+		var btn8 = document.getElementById("btn8");
+		var btn9 = document.getElementById("btn9");
+		var btn0 = document.getElementById("btn0");
+
+		// operators
+		var btnplus = document.getElementById("btnplus");
+		var btnminus = document.getElementById("btnminus");
+		var btnmult = document.getElementById("btnmult");
+		var btndivide = document.getElementById("btndivide");
+		var btnclear = document.getElementById("btnclear");
+		var btnequals = document.getElementById("btnequals");
+
+		
+		// number listeners
+		btn1.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn1.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn1.innerHTML;
+			}
+		}, false);
+		btn2.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn2.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn2.innerHTML;
+			}
+		}, false);
+		btn3.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn3.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn3.innerHTML;
+			}
+		}, false);
+		btn4.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn4.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn4.innerHTML;
+			}
+		}, false);
+		btn5.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn5.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn5.innerHTML;
+			}
+		}, false);
+		btn6.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn6.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn6.innerHTML;
+			}
+		}, false);
+		btn7.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn7.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn7.innerHTML;
+			}
+		}, false);
+		btn8.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn8.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn8.innerHTML;
+			}
+		}, false);
+		btn9.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn9.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn9.innerHTML;
+			}
+		}, false);
+		btn0.addEventListener("click", function() {
+			if (op_input.value == 0) {
+				first_input.value += btn0.innerHTML;
+			} else if (op_input != 0) {
+				second_input.value += btn0.innerHTML;
+			}
+		}, false);
+
+
+
+		// operator listeners
+		btnplus.addEventListener("click", function() {
+			op_input.value = btnplus.innerHTML;
+		}, false);
+		btnminus.addEventListener("click", function() {
+			op_input.value = btnminus.innerHTML;
+		}, false);
+		btnmult.addEventListener("click", function() {
+			op_input.value = btnmult.innerHTML;
+		}, false);
+		btndivide.addEventListener("click", function() {
+			op_input.value = btndivide.innerHTML;
+		}, false);
+
+		// operators with equals
+		btnequals.addEventListener("click", function(){
+			if (op_input.value == "+"){
+				first_input.value = parseInt(first_input.value) + parseInt(second_input.value);
+				op_input.value = "";
+				second_input.value = "";
+			}
+			if (op_input.value == "-"){
+				first_input.value = parseInt(first_input.value) - parseInt(second_input.value);
+				op_input.value = "";
+				second_input.value = "";
+			}
+			if (op_input.value == "*"){
+				first_input.value = parseInt(first_input.value) * parseInt(second_input.value);
+				op_input.value = "";
+				second_input.value = "";
+			}
+			if (op_input.value == "/"){
+				first_input.value = parseInt(first_input.value) / parseInt(second_input.value);
+				op_input.value = "";
+				second_input.value = "";
+			}
+		})
+
+		// clear
+		btnclear.addEventListener("click", function(){
+			first_input.value = "";
+			op_input.value = "";
+			second_input.value = "";
+		})
+
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
