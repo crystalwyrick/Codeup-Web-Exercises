@@ -1,0 +1,68 @@
+body {
+	background: gray;
+}
+.container {
+	background: white;
+	border: 2px solid black;
+	width: 700px;
+    margin: 25px auto;
+	padding: 10px;
+}
+.flag-base {
+	background-color: #B10021;
+	border: 2px solid black;
+	width: 650px;
+	height: 450px;
+	margin-top: auto;
+	margin-left:auto;
+	margin-right:auto;
+	position: relative;
+}
+.left-triangle {
+	width: 0; 
+	height: 0; 
+	border-color: transparent white;
+	border-style: solid;
+	border-width: 190px 0px 180px 270px;
+	margin-top: 40px;
+	position: absolute;
+}
+.right-triangle {
+	height: 0px;
+	width: 0px;
+	border-color: transparent white;
+	border-style: solid;
+	border-width: 190px 270px 180px 0px;
+	margin-left: 380px;
+	margin-top: 40px;
+	position: absolute;
+}
+.top-triangle {
+	height: 0px;
+	width: 0px;
+	border-color: white transparent;
+	border-style: solid;
+	border-width: 190px 270px 0px 270px;
+	margin-left: 50px;
+	position: absolute;
+}
+.bottom-triangle {
+	height: 0px;
+	width: 0px;
+	border-color: white transparent;
+	border-style: solid;
+	border-width: 0px 270px 190px 270px;
+	margin-top: 260px;
+	margin-left: 50px;
+	position: absolute;
+}
+
+
+
+
+
+
+
+
+
+

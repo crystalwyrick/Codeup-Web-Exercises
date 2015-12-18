@@ -22,7 +22,7 @@ if(!isset($_SESSION['LOGGED_IN_USER']))
 </head>
 <body>
 	<h2>Welcome, <?= $_SESSION['LOGGED_IN_USER'] ?></h2>
-	<h2> <a href= "logout.php"> Logout </a> </h2>
+	<h2> <a href= "auth.logout.php"> Logout </a> </h2>
 
 </body>
 </html>

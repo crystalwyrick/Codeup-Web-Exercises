@@ -2,8 +2,11 @@
 
 class Log
 {
-	public $filename = '';
-	public $handle;
+
+	protected $filename = '';
+	$filename->setfilename('');
+	
+	private $handle;
 
 	public function __construct($prefix ='log')
 	{
@@ -12,6 +15,17 @@ class Log
 
 	}
 
+	protected function setHandle()
+	{
+		$this->handle = $handle;
+	}
+	protected function setFilename()
+	{
+		if (is_writable ($filename) && is_string($filename)){
+			$this->filename = $filename;
+			touch($filename);
+		}
+	}
 
 	// function __construct runs first - constructors runs every time the class instantiates
 	public function logMessage($logLevel, $message)

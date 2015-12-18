@@ -2,6 +2,7 @@
 
 class Input
 {
+
     /**
      * Check if a given value was passed in the request
      *
@@ -10,9 +11,18 @@ class Input
      */
     public static function has($key)
     {
-        return (isset($_REQUEST[$key]));
+        if (isset($_REQUEST[$key]))
+        {
+            return true;
+        }   return false;
     }
 
+    public static function noInput ($key)
+    {
+        if (isset($_REQUEST[$key]) && $_REQUEST[$key] != '') {
+            return true;
+        }
+    }
     /**
      * Get a requested value from either $_POST or $_GET
      *
@@ -22,7 +32,40 @@ class Input
      */
     public static function get($key, $default = null)
     {
-       return self::has($key)? $_REQUEST[$key] : $default;
+        if (self::has($key)) {
+            return $_REQUEST[$key];
+        } else {
+            return $default;
+        }
+    }
+
+    public static function escape($input)
+    {
+        return htmlspecialchars(strip_tags($input));
+    }
+
+    public static function getString($key)
+    {
+        if(!self::noInput($key) || !is_string(self::get($key)) || is_numeric(self::get($key))) {
+            throw new Exception ("$key must be a string!");
+        }
+        return self::get($key);
+    }
+
+    public static function getNumber($key)
+    {
+        if(!self::noInput($key) || !is_numeric(self::get($key)))
+        {
+            throw new Exception ("$key must be a number!");
+        }
+            return self::get($key);
+    }
+
+    public static function getDate($key)
+    {
+        $date = self::get($key);
+        $d = new DateTime($date);
+        return $d;
     }
 
     ///////////////////////////////////////////////////////////////////////////
@@ -31,5 +74,5 @@ class Input
     // constructor method from being called. We will be covering private     //
     // later in the curriculum.                                              //
     ///////////////////////////////////////////////////////////////////////////
-    private function __construct() {}
+    // private function __construct() {}
 }

@@ -4,7 +4,7 @@ require_once "../../lib/Input.php";
 
 session_start();
 
-$sessionId = session_id();
+// $sessionId = session_id();
 
 $username = Input::get('username');
 $password = Input::get('password');
