@@ -1,46 +1,48 @@
 <!doctype>
 <html>
-<head>
-	<title>Switch Statements</title>
-</head>
-<body>
-	<h1>Switch Statements JS</h1>
-	<script>
-	// ignore these lines for now
-// just know that the variable 'color' will end up with a random value from the colors array
-var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
-var color = colors[Math.floor(Math.random()*colors.length)];
+    <head>
+        <title>Switch Statements</title>
+    </head>
+    <body>
+    	<h1>Switch Statements JS</h1>
+    	<script>
+    	// ignore these lines for now
+        // just know that the variable 'color' will end up with a random value from the colors array
+        var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+        var color = colors[Math.floor(Math.random()*colors.length)];
+        console.log("Random color: " + color);
 
-switch (color) {
+        // todo: create a case statement that will handle every color except indigo and violet
+        // todo: when a color is encountered log a message that tells the color, and an object of that color
+        //       example: Blue is the color of the sky.
 
-    // todo: create a case statement that will handle every color except indigo and violet
-    // todo: when a color is encountered log a message that tells the color, and an object of that color
-    //       example: Blue is the color of the sky.
+        // todo: create a default case that will catch indigo and violet
+        // todo: for the default case, log: I do not know anything by that color.
 
-    // todo: create a default case that will catch indigo and violet
-    // todo: for the default case, log: I do not know anything by that color.
-}
-
-switch (color) {
-    case "red":
-        console.log("Roses are Red.");
-        break;
-    case "orange":
-        console.log("Oranges are Orange.");
-        break;
-    case "yellow":
-        console.log("Sunflowers are Yellow.");
-        break;
-    case "green":
-        console.log("Grass is Green.");
-        break;
-    case "blue":
-        console.log("My Favorite Color!");
-        break;
-    default:
-        console.log("I do not know of anything that color.");
-}
-
-	</script>
-</body>
+        switch (color) {
+            case "red":
+                console.log("Roses are Red.");
+                break;
+            case "orange":
+                console.log("Oranges are Orange.");
+                break;
+            case "yellow":
+                console.log("Sunflowers are Yellow.");
+                break;
+            case "green":
+                console.log("Grass is Green.");
+                break;
+            case "blue":
+                console.log("My Favorite Color!");
+                break;
+            case "violet":
+                console.log("Isn't that really purple?")
+                break;
+            default:
+                console.log("I do not know of anything that color.");
+        }
+    	</script>
+    </body>
 </html>
+
+

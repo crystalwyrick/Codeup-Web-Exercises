@@ -1,9 +1,11 @@
+"use strict";
+
 // ignore these lines for now
 // just know that the variable 'color' will end up with a random value from the colors array
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
 var color = colors[Math.floor(Math.random()*colors.length)];
-
 var favorite = 'blue'; // TODO: change this to your favorite color from the list
+
 console.log("Random color chosen is " + color);
 
 
@@ -61,3 +63,7 @@ console.log("My favorite color is " + favorite);
 
 // TODO: Using the ternary operator, conditionally log a statement that
 //       says whether the random color matches your favorite color.
+
+
+
+

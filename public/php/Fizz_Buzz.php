@@ -19,3 +19,4 @@ for ($i=$number; $i <= 100; $i++) {
     	echo $i . PHP_EOL;
     }
 }
+?>

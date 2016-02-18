@@ -2,15 +2,15 @@
 
 		
 		if(i % 15 ==0) 
-			console.log("FizzBuzz");
+			echo("FizzBuzz");
 
 		else if(i % 3 == 0) 
-			console.log("Fizz");
+			echo("Fizz");
 		
 		else if(i % 5 ==0) 
-			console.log("Buzz");
+			echo("Buzz");
 		
 		else
-			console.log(i);
+			echo(i);
 	}
 
